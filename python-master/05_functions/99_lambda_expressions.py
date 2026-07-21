@@ -13,7 +13,7 @@ def addition(x, y):
 
 
 # 람다 표현식 적용 후
-pass
+lambda x, y: x + y
 
 
 """
