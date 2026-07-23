@@ -1,3 +1,32 @@
-x = int(input())
+T = int(input())
 
-print(x)
+for x in range(T):
+    
+    N, M = map(int,input().split())
+    Ai = list(map(int,input().split()))
+    Bj = list(map(int,input().split()))
+    max_total = 0
+    
+    if N >= M:
+        total = 0
+        
+        for i in range(N-M+1):
+            for j in range(M):
+                total += Ai[j+i]*Bj[j]
+                 
+        if max_total < total:
+            max_total = total
+        
+        
+    if M > N:
+        total = 0
+        
+        for i in range(M-N+1):
+            for j in range(N):
+                total += Ai[j]*Bj[j+i]
+                 
+        if max_total < total:
+            max_total = total
+            
+    print(f"#{x+1}, {max_total}")
+    
