@@ -12,7 +12,8 @@ class Animal:
 
 # Dog는 Animal을 상속 => Animal의 모든 기능을 물려받음
 class Dog:
-    pass
+    def bark(self):
+        print('멍멍')
 
 
 my_dog = Dog()
